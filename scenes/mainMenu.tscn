@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://4vtt8sx74ifj"]
+[gd_scene load_steps=8 format=3 uid="uid://4vtt8sx74ifj"]
 
-[ext_resource type="Script" uid="uid://xttxh3aivy5u" path="res://scenes/main_menu.gd" id="1_3d1i7"]
+[ext_resource type="Script" uid="uid://xttxh3aivy5u" path="res://scripts/main_menu.gd" id="1_3d1i7"]
 [ext_resource type="FontFile" uid="uid://btmuas1wj73o1" path="res://assets/fonts/GrapeSoda.ttf" id="1_qkhwq"]
+[ext_resource type="FontFile" uid="uid://dqewohnnppmla" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_48ign"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7uy4"]
 bg_color = Color(1, 1, 1, 1)
@@ -48,9 +49,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -194.0
-offset_top = -46.0
+offset_top = -134.25
 offset_right = 194.0
-offset_bottom = 171.5
+offset_bottom = 259.75
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 14
@@ -63,6 +64,7 @@ theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_48ign")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_c7uy4")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_qkhwq")
@@ -78,6 +80,7 @@ theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_48ign")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_c7uy4")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_qkhwq")
@@ -93,6 +96,7 @@ theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_48ign")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_c7uy4")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_qkhwq")

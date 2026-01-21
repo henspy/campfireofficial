@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bx24uupg6cvdr" path="res://scripts/squirrel .gd" id="1_n6pvg"]
 [ext_resource type="PackedScene" uid="uid://4hkk3gt3vlk2" path="res://scenes/killzone.tscn" id="2_n6pvg"]
-[ext_resource type="Texture2D" uid="uid://cqsi73dj4f5ww" path="res://assets/sprites/spritesheet (4).png" id="2_pjw23"]
+[ext_resource type="Texture2D" uid="uid://cqsi73dj4f5ww" path="res://assets/sprites/squirrel.png" id="2_pjw23"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2npkn"]
 atlas = ExtResource("2_pjw23")

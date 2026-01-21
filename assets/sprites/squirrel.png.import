@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bj6qjlon3rg8k"
-path="res://.godot/imported/red-dog.png-875fd65fb5d682ab896d02a6a0e304b2.ctex"
+uid="uid://cqsi73dj4f5ww"
+path="res://.godot/imported/squirrel.png-46bf551064d243fe21fee89023338fb7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/red-dog.png"
-dest_files=["res://.godot/imported/red-dog.png-875fd65fb5d682ab896d02a6a0e304b2.ctex"]
+source_file="res://assets/sprites/squirrel.png"
+dest_files=["res://.godot/imported/squirrel.png-46bf551064d243fe21fee89023338fb7.ctex"]
 
 [params]
 

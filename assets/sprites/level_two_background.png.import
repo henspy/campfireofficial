@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7fuhdhcfwk5u"
-path="res://.godot/imported/Dog-running.png-2a46b8367919ee7b8bff437c3910a730.ctex"
+uid="uid://boqk5r6fo6x44"
+path="res://.godot/imported/level_two_background.png-05ea49fce005aa00fe5546861d93ec22.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Dog-running.png"
-dest_files=["res://.godot/imported/Dog-running.png-2a46b8367919ee7b8bff437c3910a730.ctex"]
+source_file="res://assets/sprites/level_two_background.png"
+dest_files=["res://.godot/imported/level_two_background.png-05ea49fce005aa00fe5546861d93ec22.ctex"]
 
 [params]
 
