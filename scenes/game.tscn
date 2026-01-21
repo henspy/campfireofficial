@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://c87gl3pqgjrtn"]
+[gd_scene load_steps=30 format=4 uid="uid://c87gl3pqgjrtn"]
 
 [ext_resource type="Script" uid="uid://dnuw7a6tqayjf" path="res://scripts/game_manager.gd" id="1_gee14"]
 [ext_resource type="PackedScene" uid="uid://ceaej05hcks8" path="res://scenes/player.tscn" id="1_uwrxv"]
@@ -253,6 +253,158 @@ _data = {
 &"move": SubResource("Animation_0tnpc")
 }
 
+[sub_resource type="Animation" id="Animation_gee14"]
+resource_name = "move"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(96, -389), Vector2(92, 6)]
+}
+
+[sub_resource type="Animation" id="Animation_kvpfn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(96, -199)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dinhu"]
+_data = {
+&"RESET": SubResource("Animation_kvpfn"),
+&"move": SubResource("Animation_gee14")
+}
+
+[sub_resource type="Animation" id="Animation_kvuet"]
+resource_name = "move"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(221, -335), Vector2(221, 68)]
+}
+
+[sub_resource type="Animation" id="Animation_trtic"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(221, -335)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ir15t"]
+_data = {
+&"RESET": SubResource("Animation_trtic"),
+&"move": SubResource("Animation_kvuet")
+}
+
+[sub_resource type="Animation" id="Animation_dinhu"]
+resource_name = "move"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(341, -381), Vector2(341, 4)]
+}
+
+[sub_resource type="Animation" id="Animation_ir15t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(341, -381)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ca42v"]
+_data = {
+&"RESET": SubResource("Animation_ir15t"),
+&"move": SubResource("Animation_dinhu")
+}
+
+[sub_resource type="Animation" id="Animation_rysoc"]
+resource_name = "move"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(425, -325), Vector2(425, 61)]
+}
+
+[sub_resource type="Animation" id="Animation_ssvqc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(425, -325)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_264po"]
+_data = {
+&"RESET": SubResource("Animation_ssvqc"),
+&"move": SubResource("Animation_rysoc")
+}
+
 [node name="game" type="Node2D"]
 
 [node name="GameManager" type="Node" parent="."]
@@ -260,11 +412,11 @@ unique_name_in_owner = true
 script = ExtResource("1_gee14")
 
 [node name="ScoreLabel" type="Label" parent="GameManager"]
-offset_left = -28.0
-offset_top = -85.0
-offset_right = 103.0
-offset_bottom = -62.0
-theme_override_colors/font_color = Color(0.011764706, 0.14901961, 0.34901962, 1)
+offset_left = -132.0
+offset_top = -602.0
+offset_right = -1.0
+offset_bottom = -579.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("8_0tnpc")
 theme_override_font_sizes/font_size = 8
 text = "You collected X Coins"
@@ -278,7 +430,7 @@ format = 2
 
 [node name="Layer1" type="TileMapLayer" parent="Level 1/TileMap"]
 use_parent_material = true
-tile_map_data = PackedByteArray("AADm/xEAAAAAAAAAAADn/xEAAAAAAAAAAADo/xEAAAAAAAAAAADp/xEAAAAAAAAAAADq/xEAAAAAAAAAAADr/xEAAAAAAAAAAADl/xIAAAAAAAEAAADm/xIAAAAAAAEAAADn/xMAAAAAAAEAAADo/xMAAAABAAEAAADp/xMAAAAAAAEAAADq/xMAAAAAAAEAAADr/xMAAAAAAAEAAADs/xMAAAABAAEAAADk/xIAAAABAAEAAADk/xMAAAAAAAEAAADl/xMAAAABAAEAAADm/xMAAAABAAEAAADn/xIAAAAAAAEAAADo/xIAAAAAAAEAAADp/xIAAAABAAEAAADq/xIAAAAAAAEAAADr/xIAAAABAAEAAADs/xIAAAAAAAEAAADt/xIAAAAAAAEAAADt/xMAAAAAAAEAAADl/xEAAAAAAAAAAADk/w4AAAABAAEAAADk/w8AAAABAAEAAADk/xAAAAABAAEAAADk/xEAAAABAAEAAADk/xQAAAABAAAAAADl/xQAAAABAAAAAADm/xQAAAABAAAAAADn/xQAAAABAAAAAADo/xQAAAABAAAAAADp/xQAAAABAAAAAADq/xQAAAABAAAAAADr/xQAAAABAAAAAADs/xQAAAABAAAAAADt/xQAAAABAAAAAADs/xEAAAAAAAAAAADt/xEAAAAAAAAAAAD0/xEAAAAAAAAAAAD1/xEAAAAAAAAAAAD2/xEAAAAAAAAAAAD0/xIAAAAAAAEAAAD0/xMAAAABAAEAAAD0/xQAAAABAAEAAAD1/xIAAAAAAAEAAAD1/xMAAAABAAAAAAD1/xQAAAAAAAEAAAD2/xIAAAABAAAAAAD2/xMAAAAAAAEAAAD2/xQAAAABAAEAAAADABEAAAAAAAAAAAACABEAAAAAAAAAAAACABIAAAAAAAEAAAACABMAAAAAAAEAAAACABQAAAABAAAAAAADABIAAAABAAAAAAADABMAAAABAAEAAAADABQAAAAAAAEAAAAEABEAAAAAAAAAAAAFABEAAAAJAAAAAAAGABEAAAAKAAAAAAAHABEAAAALAAAAAAAIABEAAAAAAAAAAAAJABEAAAAAAAAAAAAKABEAAAAAAAAAAAAEABIAAAAAAAEAAAAEABMAAAAAAAEAAAAEABQAAAABAAAAAAAIABIAAAAAAAEAAAAIABMAAAABAAEAAAAIABQAAAAAAAEAAAAJABIAAAABAAAAAAAJABMAAAABAAAAAAAJABQAAAABAAEAAAAKABIAAAABAAEAAAAKABMAAAAAAAEAAAAKABQAAAAAAAEAAAAlABEAAAAAAAAAAAAmABEAAAAAAAAAAAAnABEAAAAAAAAAAAAlABIAAAAAAAEAAAAlABMAAAABAAAAAAAlABQAAAAAAAEAAAAmABIAAAABAAEAAAAmABMAAAABAAEAAAAmABQAAAAAAAEAAAAnABIAAAAAAAEAAAAnABMAAAABAAAAAAAnABQAAAABAAEAAAAhAAEAAAAAAAAAAAAiAAEAAAAAAAAAAAAeAAIAAAABAAEAAAAeAAMAAAAAAAEAAAAeAAQAAAAAAAEAAAAfAAIAAAABAAAAAAAfAAMAAAAAAAEAAAAfAAQAAAABAAEAAAAgAAIAAAAAAAEAAAAgAAMAAAABAAAAAAAgAAQAAAAAAAEAAAAhAAIAAAAAAAEAAAAhAAMAAAABAAAAAAAhAAQAAAAAAAEAAAAiAAIAAAABAAEAAAAiAAMAAAABAAEAAAAiAAQAAAAAAAEAAAAeAAEAAAAAAAAAAAAfAAEAAAAAAAAAAAAgAAEAAAAAAAAAAAASAAEAAAAAAAAAAAATAAEAAAAAAAAAAAAUAAEAAAAAAAAAAAAVAAEAAAAAAAAAAAAWAAEAAAAAAAAAAAAXAAEAAAAAAAAAAAAFAAEAAAAAAAAAAAAGAAEAAAAAAAAAAAAHAAEAAAAAAAAAAAAIAAEAAAAAAAAAAAAJAAEAAAAAAAAAAAAKAAEAAAAAAAAAAADs/wEAAAAAAAAAAADt/wEAAAAAAAAAAADu/wEAAAAAAAAAAADv/wEAAAAAAAAAAADw/wEAAAAAAAAAAADx/wEAAAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AADm/xEAAAAAAAAAAADn/xEAAAAAAAAAAADo/xEAAAAAAAAAAADp/xEAAAAAAAAAAADq/xEAAAAAAAAAAADr/xEAAAAAAAAAAADl/xIAAAAAAAEAAADm/xIAAAAAAAEAAADn/xMAAAAAAAEAAADo/xMAAAABAAEAAADp/xMAAAAAAAEAAADq/xMAAAAAAAEAAADr/xMAAAAAAAEAAADs/xMAAAABAAEAAADk/xIAAAABAAEAAADk/xMAAAAAAAEAAADl/xMAAAABAAEAAADm/xMAAAABAAEAAADn/xIAAAAAAAEAAADo/xIAAAAAAAEAAADp/xIAAAABAAEAAADq/xIAAAAAAAEAAADr/xIAAAABAAEAAADs/xIAAAAAAAEAAADt/xIAAAAAAAEAAADt/xMAAAAAAAEAAADl/xEAAAAAAAAAAADk/w4AAAABAAEAAADk/w8AAAABAAEAAADk/xAAAAABAAEAAADk/xEAAAABAAEAAADk/xQAAAABAAAAAADl/xQAAAABAAAAAADm/xQAAAABAAAAAADn/xQAAAABAAAAAADo/xQAAAABAAAAAADp/xQAAAABAAAAAADq/xQAAAABAAAAAADr/xQAAAABAAAAAADs/xQAAAABAAAAAADt/xQAAAABAAAAAADs/xEAAAAAAAAAAADt/xEAAAAAAAAAAAD0/xEAAAAAAAAAAAD1/xEAAAAAAAAAAAD2/xEAAAAAAAAAAAD0/xIAAAAAAAEAAAD0/xMAAAABAAEAAAD0/xQAAAABAAEAAAD1/xIAAAAAAAEAAAD1/xMAAAABAAAAAAD1/xQAAAAAAAEAAAD2/xIAAAABAAAAAAD2/xMAAAAAAAEAAAD2/xQAAAABAAEAAAADABEAAAAAAAAAAAACABEAAAAAAAAAAAACABIAAAAAAAEAAAACABMAAAAAAAEAAAACABQAAAABAAAAAAADABIAAAABAAAAAAADABMAAAABAAEAAAADABQAAAAAAAEAAAAEABEAAAAAAAAAAAAFABEAAAAJAAAAAAAGABEAAAAKAAAAAAAHABEAAAALAAAAAAAIABEAAAAAAAAAAAAJABEAAAAAAAAAAAAKABEAAAAAAAAAAAAEABIAAAAAAAEAAAAEABMAAAAAAAEAAAAEABQAAAABAAAAAAAIABIAAAAAAAEAAAAIABMAAAABAAEAAAAIABQAAAAAAAEAAAAJABIAAAABAAAAAAAJABMAAAABAAAAAAAJABQAAAABAAEAAAAKABIAAAABAAEAAAAKABMAAAAAAAEAAAAKABQAAAAAAAEAAAAlABEAAAAAAAAAAAAmABEAAAAAAAAAAAAnABEAAAAAAAAAAAAlABIAAAAAAAEAAAAlABMAAAABAAAAAAAlABQAAAAAAAEAAAAmABIAAAABAAEAAAAmABMAAAABAAEAAAAmABQAAAAAAAEAAAAnABIAAAAAAAEAAAAnABMAAAABAAAAAAAnABQAAAABAAEAAAAhAAEAAAAAAAAAAAAiAAEAAAAAAAAAAAAeAAIAAAABAAEAAAAeAAMAAAAAAAEAAAAeAAQAAAAAAAEAAAAfAAIAAAABAAAAAAAfAAMAAAAAAAEAAAAfAAQAAAABAAEAAAAgAAIAAAAAAAEAAAAgAAMAAAABAAAAAAAgAAQAAAAAAAEAAAAhAAIAAAAAAAEAAAAhAAMAAAABAAAAAAAhAAQAAAAAAAEAAAAiAAIAAAABAAEAAAAiAAMAAAABAAEAAAAiAAQAAAAAAAEAAAAeAAEAAAAAAAAAAAAfAAEAAAAAAAAAAAAgAAEAAAAAAAAAAAASAAEAAAAAAAAAAAATAAEAAAAAAAAAAAAUAAEAAAAAAAAAAAAVAAEAAAAAAAAAAAAWAAEAAAAAAAAAAAAXAAEAAAAAAAAAAAAFAAEAAAAAAAAAAAAGAAEAAAAAAAAAAAAHAAEAAAAAAAAAAAAIAAEAAAAAAAAAAAAJAAEAAAAAAAAAAAAKAAEAAAAAAAAAAADs/wEAAAAAAAAAAADt/wEAAAAAAAAAAAD0/wEAAAAAAAAAAAD1/wEAAAAAAAAAAADz/wEAAAALAAAAAADu/wEAAAAJAAAAAADv/wEAAAAKAAAAAADw/wEAAAAKAAAAAADx/wEAAAAKAAAAAADy/wEAAAAKAAAAAAAFAAIAAAAAAAEAAAAFAAMAAAABAAAAAAAFAAQAAAAAAAEAAAAGAAIAAAABAAEAAAAGAAMAAAAAAAEAAAAGAAQAAAAAAAEAAAAHAAIAAAAAAAEAAAAHAAMAAAABAAEAAAAHAAQAAAABAAEAAAAIAAIAAAAAAAEAAAAIAAMAAAABAAEAAAAIAAQAAAABAAEAAAAJAAIAAAABAAEAAAAJAAMAAAABAAAAAAAJAAQAAAAAAAEAAAAKAAIAAAAAAAEAAAAKAAMAAAAAAAEAAAAKAAQAAAABAAAAAAASAAIAAAAAAAEAAAASAAMAAAAAAAEAAAASAAQAAAABAAEAAAATAAIAAAABAAAAAAATAAMAAAAAAAEAAAATAAQAAAAAAAEAAAAUAAIAAAAAAAEAAAAUAAMAAAAAAAEAAAAUAAQAAAAAAAEAAAAVAAIAAAABAAEAAAAVAAMAAAABAAAAAAAVAAQAAAAAAAEAAAAWAAIAAAAAAAEAAAAWAAMAAAABAAEAAAAWAAQAAAABAAAAAAAXAAIAAAAAAAEAAAAXAAMAAAAAAAEAAAAXAAQAAAAAAAEAAAD0/wIAAAAAAAEAAAD0/wMAAAABAAEAAAD0/wQAAAAAAAEAAAD1/wIAAAABAAEAAAD1/wMAAAABAAAAAAD1/wQAAAAAAAEAAADs/wIAAAAAAAEAAADs/wMAAAABAAEAAADs/wQAAAAAAAEAAADt/wIAAAAAAAEAAADt/wMAAAABAAAAAADt/wQAAAABAAAAAADx/9//AAAAAAAAAADy/9//AAAAAAAAAADz/9//AAAAAAAAAAD0/9//AAAAAAAAAAD1/9//AAAAAAAAAAD2/9//AAACAAAAAAD3/9//AAAAAAAAAAD4/9//AAAAAAAAAAD5/9//AAACAAAAAAD6/9//AAACAAAAAAD7/9//AAAAAAAAAADx/+D/AAAAAAEAAADx/+H/AAAAAAEAAADx/+L/AAAAAAEAAADy/+D/AAABAAAAAADy/+H/AAAAAAEAAADy/+L/AAABAAEAAADz/+D/AAAAAAEAAADz/+H/AAAAAAEAAADz/+L/AAABAAEAAAD0/+D/AAAAAAEAAAD0/+H/AAAAAAEAAAD0/+L/AAAAAAEAAAD1/+D/AAAAAAEAAAD1/+H/AAABAAAAAAD1/+L/AAAAAAEAAAD2/+D/AAAAAAEAAAD2/+H/AAACAAEAAAD2/+L/AAABAAEAAAD3/+D/AAACAAEAAAD3/+H/AAAAAAEAAAD3/+L/AAADAAEAAAD4/+D/AAABAAAAAAD4/+H/AAADAAAAAAD4/+L/AAAAAAEAAAD5/+D/AAADAAEAAAD5/+H/AAACAAEAAAD5/+L/AAACAAEAAAD6/+D/AAACAAEAAAD6/+H/AAAAAAEAAAD6/+L/AAAAAAEAAAD7/+D/AAAAAAEAAAD7/+H/AAADAAAAAAD7/+L/AAACAAEAAAD8/9//AAACAAAAAAD9/9//AAACAAAAAAD+/9//AAACAAAAAAD//9//AAACAAAAAAAAAN//AAACAAAAAAABAN//AAACAAAAAAD8/+D/AAACAAEAAAD8/+H/AAACAAEAAAD8/+L/AAADAAAAAAD9/+D/AAADAAAAAAD9/+H/AAACAAEAAAD9/+L/AAACAAEAAAD+/+D/AAACAAEAAAD+/+H/AAADAAEAAAD+/+L/AAACAAEAAAD//+D/AAADAAEAAAD//+H/AAACAAEAAAD//+L/AAACAAEAAAAAAOD/AAADAAEAAAAAAOH/AAADAAAAAAAAAOL/AAADAAAAAAABAOD/AAACAAEAAAABAOH/AAACAAEAAAABAOL/AAACAAEAAAA=")
 tile_set = SubResource("TileSet_lbhrr")
 
 [node name="Player" parent="Level 1" instance=ExtResource("1_uwrxv")]
@@ -323,19 +475,72 @@ libraries = {
 }
 autoplay = "move"
 
-[node name="squirrel" parent="Level 1" instance=ExtResource("6_p57ef")]
+[node name="Squirrel" type="Node" parent="Level 1"]
+
+[node name="squirrel" parent="Level 1/Squirrel" instance=ExtResource("6_p57ef")]
 position = Vector2(96, -199)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level 1/Squirrel/squirrel"]
+libraries = {
+&"": SubResource("AnimationLibrary_dinhu")
+}
+autoplay = "move"
+
+[node name="squirrel1" parent="Level 1/Squirrel" instance=ExtResource("6_p57ef")]
+position = Vector2(221, -335)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level 1/Squirrel/squirrel1"]
+libraries = {
+&"": SubResource("AnimationLibrary_ir15t")
+}
+autoplay = "move"
+
+[node name="Squirrel" parent="Level 1/Squirrel" instance=ExtResource("6_p57ef")]
+position = Vector2(341, -381)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level 1/Squirrel/Squirrel"]
+libraries = {
+&"": SubResource("AnimationLibrary_ca42v")
+}
+autoplay = "move"
+
+[node name="Squirrel2" parent="Level 1/Squirrel" instance=ExtResource("6_p57ef")]
+position = Vector2(425, -325)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level 1/Squirrel/Squirrel2"]
+libraries = {
+&"": SubResource("AnimationLibrary_264po")
+}
+autoplay = "move"
+
+[node name="Platform" parent="Level 1/Squirrel" instance=ExtResource("3_lnu2h")]
+position = Vector2(-381, -26)
+
+[node name="Platform2" parent="Level 1/Squirrel" instance=ExtResource("3_lnu2h")]
+position = Vector2(-444, -93)
+
+[node name="Platform3" parent="Level 1/Squirrel" instance=ExtResource("3_lnu2h")]
+position = Vector2(-312, -153)
+
+[node name="Platform4" parent="Level 1/Squirrel" instance=ExtResource("3_lnu2h")]
+position = Vector2(-387, -304)
+
+[node name="Platform5" parent="Level 1/Squirrel" instance=ExtResource("3_lnu2h")]
+position = Vector2(-211, -329)
+
+[node name="Platform6" parent="Level 1/Squirrel" instance=ExtResource("3_lnu2h")]
+position = Vector2(-307, -449)
 
 [node name="Labels" type="Node" parent="Level 1"]
 
 [node name="Label" type="Label" parent="Level 1/Labels"]
-offset_left = -78.0
-offset_top = 2.0
-offset_right = 8.0
-offset_bottom = 25.0
+offset_left = 467.0
+offset_top = -27.0
+offset_right = 553.0
+offset_bottom = -4.0
 theme_override_fonts/font = ExtResource("8_0tnpc")
 theme_override_font_sizes/font_size = 8
-text = "Space to jump"
+text = "Dodge the Squirrels!"
 
 [node name="Label2" type="Label" parent="Level 1/Labels"]
 offset_left = -303.0
@@ -381,6 +586,28 @@ offset_bottom = 261.0
 theme_override_fonts/font = ExtResource("8_0tnpc")
 theme_override_font_sizes/font_size = 8
 text = "You can double jump too!"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Label6" type="Label" parent="Level 1/Labels"]
+offset_left = -138.0
+offset_top = -614.0
+offset_right = 9.0
+offset_bottom = -591.0
+theme_override_fonts/font = ExtResource("8_0tnpc")
+theme_override_font_sizes/font_size = 8
+text = "The maximum coins is 5."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Label7" type="Label" parent="Level 1/Labels"]
+offset_left = 40.0
+offset_top = -570.0
+offset_right = 137.0
+offset_bottom = -547.0
+theme_override_fonts/font = ExtResource("8_0tnpc")
+theme_override_font_sizes/font_size = 8
+text = "Do through the doggy door."
 horizontal_alignment = 1
 autowrap_mode = 2
 
