@@ -103,7 +103,7 @@ _data = {
 &"jump": SubResource("Animation_dqkch")
 }
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 z_index = 5
 collision_layer = 2
 script = ExtResource("1_g2els")

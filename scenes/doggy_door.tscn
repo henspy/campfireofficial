@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://e35y0dqt1kcr"]
+
+[ext_resource type="Script" uid="uid://dgomirumfrr5h" path="res://scripts/doggy_door.gd" id="1_dvqby"]
+[ext_resource type="Texture2D" uid="uid://de13eepjrf4so" path="res://assets/sprites/doggydoor.png" id="2_dvqby"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_io61k"]
+atlas = ExtResource("2_dvqby")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_chtap"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_io61k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dvqby"]
+resource_local_to_scene = true
+radius = 14.0
+
+[node name="doggy_door" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_dvqby")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_chtap")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -3)
+shape = SubResource("CircleShape2D_dvqby")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
