@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=3 uid="uid://2n6ptm7sjlmh"]
+
+[ext_resource type="Script" uid="uid://xdoyick6tsdr" path="res://scripts/level_menu.gd" id="1_jqwib"]
+[ext_resource type="Texture2D" uid="uid://bl0j81scpoxs4" path="res://assets/sprites/inside_of_the_dog_house.png" id="1_yl4fo"]
+[ext_resource type="FontFile" uid="uid://b4wwugrp4bviq" path="res://assets/fonts/PixelOperator8.ttf" id="2_rj3wb"]
+
+[node name="Level Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jqwib")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.5000076, -32.49999)
+scale = Vector2(1.4960938, 1.0976564)
+texture = ExtResource("1_yl4fo")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = -42.0
+offset_top = -62.0
+offset_right = -13.0
+offset_bottom = -42.0
+theme_override_fonts/font = ExtResource("2_rj3wb")
+theme_override_font_sizes/font_size = 8
+text = "1"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 7.0
+offset_top = -89.0
+offset_right = 36.0
+offset_bottom = -69.0
+theme_override_fonts/font = ExtResource("2_rj3wb")
+theme_override_font_sizes/font_size = 8
+text = "2
+"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = -6.0
+offset_top = -23.0
+offset_right = 23.0
+offset_bottom = -3.0
+theme_override_fonts/font = ExtResource("2_rj3wb")
+theme_override_font_sizes/font_size = 8
+text = "3
+"
+
+[connection signal="pressed" from="Button" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_level_3_pressed"]
