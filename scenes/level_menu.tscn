@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://2n6ptm7sjlmh"]
+[gd_scene load_steps=5 format=3 uid="uid://2n6ptm7sjlmh"]
 
-[ext_resource type="Script" uid="uid://xdoyick6tsdr" path="res://scripts/level_menu.gd" id="1_jqwib"]
+[ext_resource type="Script" path="res://scripts/level_menu.gd" id="1_jqwib"]
 [ext_resource type="Texture2D" uid="uid://bl0j81scpoxs4" path="res://assets/sprites/inside_of_the_dog_house.png" id="1_yl4fo"]
 [ext_resource type="FontFile" uid="uid://b4wwugrp4bviq" path="res://assets/fonts/PixelOperator8.ttf" id="2_rj3wb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jqwib"]
+texture = ExtResource("1_yl4fo")
 
 [node name="Level Menu" type="Control"]
 layout_mode = 3
@@ -13,42 +16,60 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jqwib")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(575.5, 324.5)
-scale = Vector2(4.5039063, 2.5273435)
-texture = ExtResource("1_yl4fo")
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_jqwib")
 
 [node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 451.0
-offset_top = 254.0
-offset_right = 539.0
-offset_bottom = 303.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.39322916
+anchor_top = 0.3904321
+anchor_right = 0.46961805
+anchor_bottom = 0.46604937
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_rj3wb")
 theme_override_font_sizes/font_size = 24
 text = "1"
+metadata/_edit_use_anchors_ = true
 
 [node name="Button2" type="Button" parent="."]
-layout_mode = 0
-offset_left = 595.0
-offset_top = 194.0
-offset_right = 683.0
-offset_bottom = 242.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.515625
+anchor_top = 0.29938272
+anchor_right = 0.5920139
+anchor_bottom = 0.37345678
+offset_bottom = 1.5258789e-05
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_rj3wb")
 theme_override_font_sizes/font_size = 24
 text = "2
 "
+metadata/_edit_use_anchors_ = true
 
 [node name="Button3" type="Button" parent="."]
-layout_mode = 0
-offset_left = 558.0
-offset_top = 346.0
-offset_right = 646.0
-offset_bottom = 394.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4861111
+anchor_top = 0.5339506
+anchor_right = 0.5625
+anchor_bottom = 0.6080247
+offset_bottom = -3.0517578e-05
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_rj3wb")
 theme_override_font_sizes/font_size = 24
 text = "3
 "
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Button" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_level_2_pressed"]
