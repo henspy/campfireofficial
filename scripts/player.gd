@@ -5,6 +5,8 @@ const SPEED = 130.0
 const JUMP_VELOCITY = -400.0
 var jump_count = 0
 
+@onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
+
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
