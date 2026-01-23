@@ -3,10 +3,7 @@
 [ext_resource type="Script" uid="uid://xttxh3aivy5u" path="res://scripts/main_menu.gd" id="1_3d1i7"]
 [ext_resource type="FontFile" uid="uid://btmuas1wj73o1" path="res://assets/fonts/GrapeSoda.ttf" id="1_qkhwq"]
 [ext_resource type="FontFile" uid="uid://dqewohnnppmla" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_48ign"]
-[ext_resource type="Texture2D" uid="uid://c3n36ajf6ykbv" path="res://assets/sprites/Home_page_thingy.png" id="2_l7wge"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l7wge"]
-texture = ExtResource("2_l7wge")
+[ext_resource type="Texture2D" uid="uid://c3n36ajf6ykbv" path="res://assets/sprites/Home_page_thingy.png" id="4_l7wge"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7uy4"]
 bg_color = Color(1, 1, 1, 1)
@@ -34,6 +31,9 @@ shadow_size = 5
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qkhwq"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7nrmo"]
+texture = ExtResource("4_l7wge")
+
 [node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 8
@@ -44,16 +44,6 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3d1i7")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Panel" type="Panel" parent="CanvasLayer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_l7wge")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -136,6 +126,12 @@ theme_override_font_sizes/font_size = 85
 text = "Doggy Adventure"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_7nrmo")
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_options_pressed"]
