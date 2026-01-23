@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://bornqide7cw5i"]
+[gd_scene load_steps=26 format=4 uid="uid://ffonpdd8ejwg"]
 
 [ext_resource type="Script" uid="uid://dnuw7a6tqayjf" path="res://scripts/game_manager.gd" id="1_ha73p"]
 [ext_resource type="Texture2D" uid="uid://bkfcu2bwi5q07" path="res://assets/sprites/world_tileset.png" id="2_vcx5n"]
@@ -1427,3 +1427,6 @@ position = Vector2(-10, -541)
 
 [node name="Fish" parent="." instance=ExtResource("3_ha73p")]
 position = Vector2(-276, 279)
+
+[node name="Fish2" parent="." instance=ExtResource("3_ha73p")]
+position = Vector2(39, 267)
