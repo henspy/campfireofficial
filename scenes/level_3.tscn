@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://ffonpdd8ejwg"]
+[gd_scene load_steps=26 format=4 uid="uid://bornqide7cw5i"]
 
 [ext_resource type="Script" uid="uid://dnuw7a6tqayjf" path="res://scripts/game_manager.gd" id="1_ha73p"]
 [ext_resource type="Texture2D" uid="uid://bkfcu2bwi5q07" path="res://assets/sprites/world_tileset.png" id="2_vcx5n"]
@@ -670,7 +670,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_lnu2h"]
 resource_name = "move"
-length = 4.0
+length = 6.0
 loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -679,7 +679,7 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 3.9666667),
+"times": PackedFloat32Array(0, 5.9666667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-147, 276), Vector2(557, 276)]
@@ -1313,6 +1313,11 @@ cache/0/50/0/glyphs/69/texture_idx = 0
 
 [node name="level_2" type="Node2D"]
 
+[node name="BackGroundBackYard" type="Sprite2D" parent="."]
+position = Vector2(32, -206)
+scale = Vector2(5.0156245, 5.015626)
+texture = ExtResource("7_wae8j")
+
 [node name="GameManager" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("1_ha73p")
@@ -1391,9 +1396,6 @@ libraries = {
 }
 autoplay = "move"
 
-[node name="Platform2" parent="Level 2/Platforms" instance=ExtResource("6_p3r0x")]
-position = Vector2(-190, 222)
-
 [node name="Platform 3" parent="Level 2/Platforms" instance=ExtResource("6_p3r0x")]
 position = Vector2(186, 276)
 
@@ -1427,11 +1429,6 @@ theme_override_font_sizes/font_size = 8
 text = "Do through the doggy door."
 horizontal_alignment = 1
 autowrap_mode = 2
-
-[node name="BackGroundBackYard" type="Sprite2D" parent="."]
-position = Vector2(32, -206)
-scale = Vector2(5.0156245, 5.015626)
-texture = ExtResource("7_wae8j")
 
 [node name="doggy door" parent="." instance=ExtResource("9_ema3p")]
 position = Vector2(-10, -541)

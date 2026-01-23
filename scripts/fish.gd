@@ -1,6 +1,6 @@
 extends Node2D
 
-const SPEED = 60
+const SPEED = 100
 var direction = 1
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
