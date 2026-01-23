@@ -15,11 +15,9 @@ func _on_start_pressed() -> void:
 
 
 
+func _on_options_pressed() -> void:
+	pass # Replace with function body.
 
 
-func _on_mindmap_pressed() -> void:
-	print("startpressed")
-
-
-func _on_tutorial_pressed() -> void:
-	print("startpressed")
+func _on_quit_pressed() -> void:
+	get_tree().quit()
