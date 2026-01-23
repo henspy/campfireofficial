@@ -1,0 +1,77 @@
+[gd_scene load_steps=4 format=3 uid="uid://c58x2eif0ynni"]
+
+[ext_resource type="Script" uid="uid://coukm4knmek2s" path="res://scripts/volume_menu.gd" id="1_1ken0"]
+[ext_resource type="Script" uid="uid://cmtq5qvbum38y" path="res://scripts/audio_options.gd" id="2_gbio0"]
+[ext_resource type="FontFile" uid="uid://dqewohnnppmla" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_5mxti"]
+
+[node name="volume_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1ken0")
+
+[node name="audio options" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_gbio0")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="audio options"]
+layout_mode = 0
+offset_left = 338.0
+offset_top = 231.0
+offset_right = 802.0
+offset_bottom = 436.0
+
+[node name="Label" type="Label" parent="audio options/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_5mxti")
+text = "Master"
+
+[node name="master" type="HSlider" parent="audio options/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+max_value = 1.0
+step = 0.01
+
+[node name="Label2" type="Label" parent="audio options/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_5mxti")
+text = "Music"
+
+[node name="music" type="HSlider" parent="audio options/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+max_value = 1.0
+step = 0.01
+
+[node name="Label3" type="Label" parent="audio options/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_5mxti")
+text = "SFX"
+
+[node name="sfx" type="HSlider" parent="audio options/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+max_value = 1.0
+step = 0.01
+
+[node name="confirm" type="Button" parent="audio options"]
+layout_mode = 0
+offset_left = 1010.0
+offset_top = 602.0
+offset_right = 1126.0
+offset_bottom = 626.0
+theme_override_fonts/font = ExtResource("3_5mxti")
+text = "Apply"
+
+[connection signal="mouse_exited" from="audio options/VBoxContainer/master" to="audio options" method="_on_master_mouse_exited"]
+[connection signal="mouse_exited" from="audio options/VBoxContainer/music" to="audio options" method="_on_music_mouse_exited"]
+[connection signal="mouse_exited" from="audio options/VBoxContainer/sfx" to="audio options" method="_on_sfx_mouse_exited"]
+[connection signal="pressed" from="audio options/confirm" to="." method="_on_confirm_pressed"]
