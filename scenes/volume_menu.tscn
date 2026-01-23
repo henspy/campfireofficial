@@ -14,17 +14,27 @@ grow_vertical = 2
 script = ExtResource("1_1ken0")
 
 [node name="audio options" type="Control" parent="."]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("2_gbio0")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="audio options"]
-layout_mode = 0
-offset_left = 338.0
-offset_top = 231.0
-offset_right = 802.0
-offset_bottom = 436.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -232.0
+offset_top = -102.5
+offset_right = 232.0
+offset_bottom = 102.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Label" type="Label" parent="audio options/VBoxContainer"]
 layout_mode = 2
@@ -62,16 +72,33 @@ size_flags_vertical = 3
 max_value = 1.0
 step = 0.01
 
-[node name="confirm" type="Button" parent="audio options"]
-layout_mode = 0
-offset_left = 1010.0
-offset_top = 602.0
-offset_right = 1126.0
-offset_bottom = 626.0
+[node name="confirm" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -116.0
+offset_top = -24.0
+grow_horizontal = 0
+grow_vertical = 0
 theme_override_fonts/font = ExtResource("3_5mxti")
 text = "Apply"
+
+[node name="back" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -24.0
+offset_right = 72.0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_5mxti")
+text = "Back"
 
 [connection signal="mouse_exited" from="audio options/VBoxContainer/master" to="audio options" method="_on_master_mouse_exited"]
 [connection signal="mouse_exited" from="audio options/VBoxContainer/music" to="audio options" method="_on_music_mouse_exited"]
 [connection signal="mouse_exited" from="audio options/VBoxContainer/sfx" to="audio options" method="_on_sfx_mouse_exited"]
-[connection signal="pressed" from="audio options/confirm" to="." method="_on_confirm_pressed"]
+[connection signal="pressed" from="confirm" to="." method="_on_confirm_pressed"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

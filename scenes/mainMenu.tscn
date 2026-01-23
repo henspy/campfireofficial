@@ -7,6 +7,7 @@
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7nrmo"]
 texture = ExtResource("4_l7wge")
+modulate_color = Color(0.31431612, 0.31431612, 0.3143161, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7uy4"]
 bg_color = Color(1, 1, 1, 1)
@@ -132,10 +133,10 @@ offset_right = 292.0
 offset_bottom = -150.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_qkhwq")
 theme_override_font_sizes/font_size = 85
-text = "Doggy Adventure"
+text = "A Dog's Best Friend"
 horizontal_alignment = 1
 vertical_alignment = 1
 

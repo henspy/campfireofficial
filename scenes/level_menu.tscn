@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://2n6ptm7sjlmh"]
+[gd_scene load_steps=6 format=3 uid="uid://2n6ptm7sjlmh"]
 
-[ext_resource type="Script" path="res://scripts/level_menu.gd" id="1_jqwib"]
+[ext_resource type="Script" uid="uid://xdoyick6tsdr" path="res://scripts/level_menu.gd" id="1_jqwib"]
 [ext_resource type="Texture2D" uid="uid://bl0j81scpoxs4" path="res://assets/sprites/inside_of_the_dog_house.png" id="1_yl4fo"]
 [ext_resource type="FontFile" uid="uid://b4wwugrp4bviq" path="res://assets/fonts/PixelOperator8.ttf" id="2_rj3wb"]
+[ext_resource type="FontFile" uid="uid://dqewohnnppmla" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="4_7obll"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jqwib"]
 texture = ExtResource("1_yl4fo")
@@ -71,6 +72,18 @@ text = "3
 "
 metadata/_edit_use_anchors_ = true
 
+[node name="back" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -24.0
+offset_right = 116.0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("4_7obll")
+text = "Back"
+
 [connection signal="pressed" from="Button" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_level_2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
