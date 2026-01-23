@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ds0hbf0j1hpv4" path="res://scenes/coin.tscn" id="5_q2dsb"]
 [ext_resource type="PackedScene" uid="uid://dla8tygbmux1o" path="res://scenes/platform.tscn" id="6_p3r0x"]
 [ext_resource type="Texture2D" uid="uid://csy6xbhbojou7" path="res://assets/sprites/level_3_baxkground.png" id="7_wae8j"]
-[ext_resource type="PackedScene" uid="uid://e35y0dqt1kcr" path="res://scenes/doggy_door.tscn" id="9_ema3p"]
+[ext_resource type="Texture2D" uid="uid://b7qcgju0hbxit" path="res://assets/sprites/Cat.png" id="9_ha73p"]
 
 [sub_resource type="Image" id="Image_7qsfm"]
 data = {
@@ -1443,9 +1443,6 @@ position = Vector2(32, -206)
 scale = Vector2(5.0156245, 5.015626)
 texture = ExtResource("7_wae8j")
 
-[node name="doggy door" parent="." instance=ExtResource("9_ema3p")]
-position = Vector2(-10, -541)
-
 [node name="Fish" parent="." instance=ExtResource("3_ha73p")]
 position = Vector2(-330, 268)
 
@@ -1457,3 +1454,8 @@ position = Vector2(94, 24)
 
 [node name="Fish4" parent="." instance=ExtResource("3_ha73p")]
 position = Vector2(-151, 25)
+
+[node name="Cat" type="Sprite2D" parent="."]
+position = Vector2(-10, -543)
+scale = Vector2(0.46874997, 0.46874997)
+texture = ExtResource("9_ha73p")

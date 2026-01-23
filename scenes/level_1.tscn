@@ -633,9 +633,6 @@ text = "Make sure to collect coins too!"
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="Platform" parent="Level 1" instance=ExtResource("7_7nomh")]
-position = Vector2(-346, 67)
-
 [node name="BackGroundBackYard" type="Sprite2D" parent="."]
 position = Vector2(27.50003, -160.78918)
 scale = Vector2(0.9429688, 0.9429691)

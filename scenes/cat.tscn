@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://bhod3doeqwypp"]
+
+[ext_resource type="Script" uid="uid://cmk0tkc67v4np" path="res://scripts/cat.gd" id="1_t8pth"]
+[ext_resource type="Texture2D" uid="uid://de13eepjrf4so" path="res://assets/sprites/doggydoor.png" id="2_t8pth"]
+[ext_resource type="Texture2D" uid="uid://b7qcgju0hbxit" path="res://assets/sprites/Cat.png" id="3_t8pth"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_io61k"]
+atlas = ExtResource("2_t8pth")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_chtap"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_io61k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_t8pth")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dvqby"]
+resource_local_to_scene = true
+radius = 14.0
+
+[node name="cat" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_t8pth")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2.4999998, -1.5000019)
+scale = Vector2(0.27343753, 0.27343753)
+sprite_frames = SubResource("SpriteFrames_chtap")
+frame = 1
+frame_progress = 0.17588432
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -3)
+shape = SubResource("CircleShape2D_dvqby")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
