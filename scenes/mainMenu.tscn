@@ -5,9 +5,8 @@
 [ext_resource type="FontFile" uid="uid://dqewohnnppmla" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_48ign"]
 [ext_resource type="Texture2D" uid="uid://c3n36ajf6ykbv" path="res://assets/sprites/Home_page_thingy.png" id="2_l7wge"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7nrmo"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l7wge"]
 texture = ExtResource("2_l7wge")
-modulate_color = Color(0.31431612, 0.31431612, 0.3143161, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7uy4"]
 bg_color = Color(1, 1, 1, 1)
@@ -46,15 +45,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3d1i7")
 
-[node name="Panel" type="Panel" parent="."]
-layout_mode = 1
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(28.802032, 16.200567)
-theme_override_styles/panel = SubResource("StyleBoxTexture_7nrmo")
+theme_override_styles/panel = SubResource("StyleBoxTexture_l7wge")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
