@@ -1,30 +1,33 @@
-[gd_scene load_steps=7 format=3 uid="uid://bke1bx15mkl4o"]
+[gd_scene load_steps=8 format=3 uid="uid://bke1bx15mkl4o"]
 
 [ext_resource type="Texture2D" uid="uid://3tk5ydh8geid" path="res://assets/sprites/fish.png" id="1_n6yr6"]
 [ext_resource type="Script" uid="uid://dkw1c71ml2sop" path="res://scripts/fish.gd" id="1_nub35"]
 [ext_resource type="PackedScene" uid="uid://4hkk3gt3vlk2" path="res://scenes/killzone.tscn" id="2_8g0i4"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8g0i4"]
-atlas = ExtResource("1_n6yr6")
-region = Rect2(0, 0, 64, 64)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_nub35"]
 atlas = ExtResource("1_n6yr6")
-region = Rect2(64, 0, 64, 64)
+region = Rect2(0, 0, 45, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pgks6"]
+atlas = ExtResource("1_n6yr6")
+region = Rect2(65, 0, 45, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pgks6"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8g0i4")
+"texture": SubResource("AtlasTexture_nub35")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_nub35")
+"texture": SubResource("AtlasTexture_pgks6")
 }],
 "loop": true,
 "name": &"default",
 "speed": 3.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nub35"]
+size = Vector2(20, 8)
 
 [node name="Fish" type="Node2D"]
 script = ExtResource("1_nub35")
@@ -33,11 +36,13 @@ script = ExtResource("1_nub35")
 position = Vector2(5, 3)
 sprite_frames = SubResource("SpriteFrames_pgks6")
 autoplay = "default"
-frame_progress = 0.83411527
+frame_progress = 0.59759736
 
 [node name="Killzone" parent="AnimatedSprite2D" instance=ExtResource("2_8g0i4")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Killzone"]
+position = Vector2(2, -3)
+shape = SubResource("RectangleShape2D_nub35")
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
 target_position = Vector2(10, 0)
