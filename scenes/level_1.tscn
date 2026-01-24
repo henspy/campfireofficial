@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://clsut44n0vly1"]
+[gd_scene load_steps=33 format=4 uid="uid://clsut44n0vly1"]
 
 [ext_resource type="Script" uid="uid://dnuw7a6tqayjf" path="res://scripts/game_manager.gd" id="1_2y5yt"]
 [ext_resource type="FontFile" uid="uid://b4wwugrp4bviq" path="res://assets/fonts/PixelOperator8.ttf" id="2_2os1m"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://c74itoqnhe2gj" path="res://scenes/squirrel.tscn" id="8_1s4pk"]
 [ext_resource type="Texture2D" uid="uid://chgwfj2lan8ot" path="res://assets/images/BackGroundBackYard.png" id="9_x2xxo"]
 [ext_resource type="PackedScene" uid="uid://e35y0dqt1kcr" path="res://scenes/doggy_door.tscn" id="10_2cbcq"]
+[ext_resource type="PackedScene" uid="uid://cpa1kakkqjsww" path="res://scenes/pause_menu.tscn" id="11_2os1m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("3_go7sj")
@@ -640,3 +641,7 @@ texture = ExtResource("9_x2xxo")
 
 [node name="doggy door" parent="." instance=ExtResource("10_2cbcq")]
 position = Vector2(-10, -541)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pause Menu" parent="CanvasLayer" instance=ExtResource("11_2os1m")]
