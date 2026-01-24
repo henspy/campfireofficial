@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ds0hbf0j1hpv4" path="res://scenes/coin.tscn" id="5_q2dsb"]
 [ext_resource type="PackedScene" uid="uid://dla8tygbmux1o" path="res://scenes/platform.tscn" id="6_p3r0x"]
 [ext_resource type="Texture2D" uid="uid://csy6xbhbojou7" path="res://assets/sprites/level_3_baxkground.png" id="7_wae8j"]
-[ext_resource type="Texture2D" uid="uid://b7qcgju0hbxit" path="res://assets/sprites/Cat.png" id="9_ha73p"]
+[ext_resource type="PackedScene" uid="uid://bhod3doeqwypp" path="res://scenes/cat.tscn" id="10_56dhn"]
 [ext_resource type="PackedScene" uid="uid://cpa1kakkqjsww" path="res://scenes/pause_menu.tscn" id="10_vcx5n"]
 
 [sub_resource type="Image" id="Image_7qsfm"]
@@ -1472,9 +1472,7 @@ position = Vector2(94, 24)
 [node name="Fish4" parent="." instance=ExtResource("3_ha73p")]
 position = Vector2(-151, 25)
 
-[node name="Cat" type="Sprite2D" parent="."]
-position = Vector2(-10, -543)
-scale = Vector2(0.46874997, 0.46874997)
-texture = ExtResource("9_ha73p")
-
 [node name="Pause Menu" parent="." instance=ExtResource("10_vcx5n")]
+
+[node name="cat" parent="." instance=ExtResource("10_56dhn")]
+position = Vector2(-4, -534)
