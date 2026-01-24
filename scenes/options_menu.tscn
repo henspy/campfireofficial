@@ -1,8 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://bxl76bcl8rogb"]
+[gd_scene load_steps=10 format=3 uid="uid://bxl76bcl8rogb"]
 
 [ext_resource type="Script" uid="uid://dtx78u0fq41bx" path="res://scripts/options_menu.gd" id="1_ijpji"]
 [ext_resource type="FontFile" uid="uid://dqewohnnppmla" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_lfjc7"]
 [ext_resource type="FontFile" uid="uid://btmuas1wj73o1" path="res://assets/fonts/GrapeSoda.ttf" id="3_3xsyx"]
+[ext_resource type="Texture2D" uid="uid://c3n36ajf6ykbv" path="res://assets/sprites/Home_page_thingy.png" id="4_lfjc7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3xsyx"]
+texture = ExtResource("4_lfjc7")
+modulate_color = Color(0.3137255, 0.3137255, 0.3137255, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7uy4"]
 bg_color = Color(1, 1, 1, 1)
@@ -32,14 +37,21 @@ shadow_size = 5
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ijpji")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_3xsyx")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
