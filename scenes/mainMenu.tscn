@@ -118,7 +118,8 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_c7uy4")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_qkhwq")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3d1i7")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_qkhwq")
-text = "Quit"
+text = "Quit
+(only .exe)"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -136,7 +137,7 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_qkhwq")
 theme_override_font_sizes/font_size = 85
-text = "A Dog's Best Friend"
+text = "placeholder"
 horizontal_alignment = 1
 vertical_alignment = 1
 
