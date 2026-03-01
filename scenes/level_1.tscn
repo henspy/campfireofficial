@@ -4389,6 +4389,11 @@ position = Vector2(-17, -219)
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(38, -18)
 zoom = Vector2(4, 4)
+limit_left = -165
+limit_top = -257
+limit_right = 253
+limit_bottom = 91
+editor_draw_limits = true
 
 [node name="Killzone" parent="." instance=ExtResource("6_2os1m")]
 position = Vector2(25, 69)
