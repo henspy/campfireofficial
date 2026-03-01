@@ -112,12 +112,11 @@ script = ExtResource("1_g2els")
 position = Vector2(30.375002, -27.396551)
 scale = Vector2(0.4472656, 0.43184263)
 sprite_frames = SubResource("SpriteFrames_tuyoq")
-animation = &"idle"
+animation = &"double_jump"
 autoplay = "idle"
-frame_progress = 0.4160643
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(29.000002, -18)
+position = Vector2(27, -13)
 shape = SubResource("RectangleShape2D_y4r1p")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
