@@ -1,8 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://b3yqpxfadjvym"]
+[gd_scene load_steps=12 format=3 uid="uid://bkxnb2poe41b"]
 
 [ext_resource type="Script" uid="uid://b55q4u5c2oyf8" path="res://player.gd" id="1_y73ct"]
 [ext_resource type="Texture2D" uid="uid://ddh6w3p22ed4d" path="res://assets/sprites/player/male_hero_free/male_hero.png" id="2_jmdqc"]
-[ext_resource type="Script" path="res://collision_shape_2d.gd" id="3_pxktv"]
+[ext_resource type="Script" uid="uid://bobfr4357g3ex" path="res://collision_shape_2d.gd" id="3_pxktv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_onrkg"]
 atlas = ExtResource("2_jmdqc")

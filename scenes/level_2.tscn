@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://dfh6s2l4jm53y"]
+[gd_scene load_steps=15 format=4 uid="uid://davne5s12vri1"]
 
 [ext_resource type="Texture2D" uid="uid://pa8hlmjh811t" path="res://assets/sprites/cave/background1.png" id="1_6cvei"]
 [ext_resource type="Texture2D" uid="uid://byy7ieyxg0wma" path="res://assets/sprites/cave/background3.png" id="2_que50"]

@@ -4,8 +4,8 @@
 [ext_resource type="Script" uid="uid://do4gyc1qjyigm" path="res://red_gem.gd" id="1_l0vri"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5qd4p"]
-radius = 1.6922455
-height = 4.850136
+radius = 2.6096497
+height = 6.041664
 
 [node name="Red gem" type="Area2D"]
 script = ExtResource("1_l0vri")
