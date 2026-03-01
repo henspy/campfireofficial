@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bvmni1nwnsnkx"]
+[gd_scene load_steps=4 format=3 uid="uid://cbfsm4ak5vg4s"]
 
-[ext_resource type="Texture2D" uid="uid://bpor6kycn424h" path="res://assets/sprites/treasure to pick up/demo_spritesheet.png" id="1_tm843"]
-[ext_resource type="Script" uid="uid://bdl8xk41jkx5y" path="res://pink_gem.gd" id="1_u2c1p"]
+[ext_resource type="Texture2D" path="res://assets/sprites/treasure to pick up/demo_spritesheet.png" id="1_tm843"]
+[ext_resource type="Script" path="res://pink_gem.gd" id="1_u2c1p"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u2c1p"]
 radius = 8.943708

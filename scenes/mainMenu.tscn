@@ -1,13 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://4vtt8sx74ifj"]
+[gd_scene load_steps=13 format=3 uid="uid://4vtt8sx74ifj"]
 
 [ext_resource type="Script" uid="uid://xttxh3aivy5u" path="res://scripts/main_menu.gd" id="1_3d1i7"]
 [ext_resource type="FontFile" uid="uid://btmuas1wj73o1" path="res://assets/fonts/GrapeSoda.ttf" id="1_qkhwq"]
 [ext_resource type="FontFile" uid="uid://dqewohnnppmla" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_48ign"]
-[ext_resource type="Texture2D" uid="uid://d3quaedeyvmly" path="res://assets/sprites/Screenshot 2026-03-01 114203.png" id="2_y35fp"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7nrmo"]
-texture = ExtResource("2_y35fp")
-modulate_color = Color(0.973535, 0.9735351, 0.973535, 1)
+[ext_resource type="Texture2D" uid="uid://4vamaoqduvas" path="res://assets/background1.png" id="2_ldpc3"]
+[ext_resource type="Texture2D" uid="uid://daf2vna40mies" path="res://assets/background3.png" id="3_y35fp"]
+[ext_resource type="Texture2D" uid="uid://dpcgq4hqco3sx" path="res://assets/background4b.png" id="4_dj72i"]
+[ext_resource type="Texture2D" uid="uid://c3n36ajf6ykbv" path="res://assets/sprites/Home_page_thingy.png" id="4_l7wge"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7uy4"]
 bg_color = Color(1, 1, 1, 1)
@@ -35,6 +34,10 @@ shadow_size = 5
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qkhwq"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7nrmo"]
+texture = ExtResource("4_l7wge")
+modulate_color = Color(0.31431612, 0.31431612, 0.3143161, 1)
+
 [node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 8
@@ -49,13 +52,20 @@ script = ExtResource("1_3d1i7")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
 
-[node name="Panel" type="Panel" parent="CanvasLayer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_7nrmo")
+[node name="Background1" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(581, 319.5)
+scale = Vector2(1.2083334, 1.3520833)
+texture = ExtResource("2_ldpc3")
+
+[node name="Background3" type="Sprite2D" parent="CanvasLayer/Background1"]
+position = Vector2(0.8275757, 4.067795)
+scale = Vector2(0.987931, 1.0077041)
+texture = ExtResource("3_y35fp")
+
+[node name="Background4b" type="Sprite2D" parent="CanvasLayer/Background1/Background3"]
+position = Vector2(0.8377075, 3.302765)
+scale = Vector2(1.0017452, 0.98623854)
+texture = ExtResource("4_dj72i")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -140,6 +150,19 @@ theme_override_font_sizes/font_size = 85
 text = "Through the Unknown"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -576.0
+offset_top = -324.0
+offset_right = -576.0
+offset_bottom = -324.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_7nrmo")
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_options_pressed"]
