@@ -1,0 +1,95 @@
+[gd_scene load_steps=14 format=3 uid="uid://tgtwg1o6besa"]
+
+[ext_resource type="Texture2D" uid="uid://c4o7m7fslfnnv" path="res://assets/sprites/player/male_hero_free/individual_sheets/male_hero-walk.png" id="1_ikxa8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w6v2b"]
+atlas = ExtResource("1_ikxa8")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wbbyg"]
+atlas = ExtResource("1_ikxa8")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m4rd7"]
+atlas = ExtResource("1_ikxa8")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8clgo"]
+atlas = ExtResource("1_ikxa8")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2qhyq"]
+atlas = ExtResource("1_ikxa8")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_by6w3"]
+atlas = ExtResource("1_ikxa8")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rhqhw"]
+atlas = ExtResource("1_ikxa8")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ut83"]
+atlas = ExtResource("1_ikxa8")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pj74j"]
+atlas = ExtResource("1_ikxa8")
+region = Rect2(1024, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_05m38"]
+atlas = ExtResource("1_ikxa8")
+region = Rect2(1152, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8dmxy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w6v2b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wbbyg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m4rd7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8clgo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2qhyq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_by6w3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rhqhw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ut83")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pj74j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_05m38")
+}],
+"loop": true,
+"name": &"player walk",
+"speed": 18.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5682l"]
+size = Vector2(11, 20)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_8dmxy")
+animation = &"player walk"
+frame_progress = 0.32261235
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_5682l")
