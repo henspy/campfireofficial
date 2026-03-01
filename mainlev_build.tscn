@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cue8sscjr457l"]
+
+[ext_resource type="Texture2D" uid="uid://bhubvtxj6mjnd" path="res://assets/mainlev_build.png" id="1_ru828"]
+
+[node name="MainlevBuild" type="Sprite2D"]
+position = Vector2(264, 295)
+texture = ExtResource("1_ru828")
