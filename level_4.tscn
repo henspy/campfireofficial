@@ -3406,6 +3406,7 @@ sources/3 = SubResource("TileSetAtlasSource_s24i2")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_rrs1j"]
 
 [node name="level 4" type="Node2D"]
+position = Vector2(4, -489)
 
 [node name="Background1" type="Sprite2D" parent="."]
 position = Vector2(479, 238)
