@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://clsut44n0vly1"]
+[gd_scene load_steps=13 format=4 uid="uid://clsut44n0vly1"]
 
 [ext_resource type="Texture2D" uid="uid://pa8hlmjh811t" path="res://assets/sprites/cave/background1.png" id="1_4nkto"]
 [ext_resource type="Texture2D" uid="uid://byy7ieyxg0wma" path="res://assets/sprites/cave/background3.png" id="2_fcfvj"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cgc1ujan5dhi6" path="res://assets/sprites/cave/props1.png" id="4_15mv3"]
 [ext_resource type="Texture2D" uid="uid://cdffmmkctueci" path="res://assets/sprites/cave/props2.png" id="5_e3sih"]
 [ext_resource type="PackedScene" uid="uid://ceaej05hcks8" path="res://scenes/player.tscn" id="6_npvyu"]
+[ext_resource type="PackedScene" uid="uid://4hkk3gt3vlk2" path="res://scenes/killzone.tscn" id="7_xe5ky"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2y5yt"]
 texture = ExtResource("3_pa8r4")
@@ -3442,6 +3443,9 @@ sources/0 = SubResource("TileSetAtlasSource_2y5yt")
 sources/2 = SubResource("TileSetAtlasSource_2os1m")
 sources/3 = SubResource("TileSetAtlasSource_go7sj")
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_a8hwm"]
+distance = -4.0
+
 [node name="level_2" type="Node2D"]
 
 [node name="Background1" type="Sprite2D" parent="."]
@@ -3466,3 +3470,10 @@ position = Vector2(42, 230)
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(38, -18)
 zoom = Vector2(4, 4)
+
+[node name="Killzone" parent="." instance=ExtResource("7_xe5ky")]
+position = Vector2(140, 591)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(-5, 47)
+shape = SubResource("WorldBoundaryShape2D_a8hwm")
