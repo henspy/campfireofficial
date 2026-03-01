@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctruha3nldwtr"]
+
+[ext_resource type="Texture2D" uid="uid://dilyeayo6t530" path="res://assets/sprites/cave/demo_spritesheet.png" id="1_5rg0c"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5qd4p"]
+radius = 1.6922455
+height = 4.850136
+
+[node name="Red gem" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(147.85938, 74.77344)
+scale = Vector2(0.9794644, 1.2486215)
+texture = ExtResource("1_5rg0c")
+region_enabled = true
+region_rect = Rect2(29.818222, -0.8530421, 35.079887, 34.03938)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(148, 75.00001)
+rotation = -0.8269134
+scale = Vector2(4.833867, 5.166674)
+skew = 0.29696465
+shape = SubResource("CapsuleShape2D_5qd4p")
