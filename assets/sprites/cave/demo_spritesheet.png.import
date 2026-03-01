@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckrxjj1xmxbot"
-path="res://.godot/imported/male_hero-idle.png-1da6b046feeee0f06dd63429ead321f9.ctex"
+uid="uid://dilyeayo6t530"
+path="res://.godot/imported/demo_spritesheet.png-82f9094182cd123907a7dcd62fd918bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/player/male_hero_free/individual_sheets/male_hero-idle.png"
-dest_files=["res://.godot/imported/male_hero-idle.png-1da6b046feeee0f06dd63429ead321f9.ctex"]
+source_file="res://assets/sprites/cave/demo_spritesheet.png"
+dest_files=["res://.godot/imported/demo_spritesheet.png-82f9094182cd123907a7dcd62fd918bb.ctex"]
 
 [params]
 

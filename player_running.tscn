@@ -1,30 +1,31 @@
-[gd_scene load_steps=11 format=3 uid="uid://dwhxsypdnlipn"]
+[gd_scene load_steps=12 format=3 uid="uid://bkxnb2poe41b"]
 
-[ext_resource type="Texture2D" uid="uid://ddh6w3p22ed4d" path="res://assets/sprites/player/male_hero_free/male_hero.png" id="1_4flbx"]
-[ext_resource type="Script" uid="uid://b55q4u5c2oyf8" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="Script" uid="uid://b55q4u5c2oyf8" path="res://player.gd" id="1_y73ct"]
+[ext_resource type="Texture2D" uid="uid://ddh6w3p22ed4d" path="res://assets/sprites/player/male_hero_free/male_hero.png" id="2_jmdqc"]
+[ext_resource type="Script" uid="uid://bobfr4357g3ex" path="res://collision_shape_2d.gd" id="3_pxktv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_onrkg"]
-atlas = ExtResource("1_4flbx")
+atlas = ExtResource("2_jmdqc")
 region = Rect2(0, 640, 101, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i3pqv"]
-atlas = ExtResource("1_4flbx")
+atlas = ExtResource("2_jmdqc")
 region = Rect2(101, 640, 101, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hqtel"]
-atlas = ExtResource("1_4flbx")
+atlas = ExtResource("2_jmdqc")
 region = Rect2(202, 640, 101, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sweqy"]
-atlas = ExtResource("1_4flbx")
+atlas = ExtResource("2_jmdqc")
 region = Rect2(303, 640, 101, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2hs0m"]
-atlas = ExtResource("1_4flbx")
+atlas = ExtResource("2_jmdqc")
 region = Rect2(404, 640, 101, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1jxqw"]
-atlas = ExtResource("1_4flbx")
+atlas = ExtResource("2_jmdqc")
 region = Rect2(505, 640, 101, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dw050"]
@@ -57,14 +58,20 @@ animations = [{
 height = 20.0
 
 [node name="Player running" type="CharacterBody2D"]
-script = ExtResource("1_onrkg")
+script = ExtResource("1_y73ct")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+visible = false
+zoom = Vector2(4, 4)
+position_smoothing_enabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_dw050")
 animation = &"running"
-frame_progress = 0.17252463
+frame_progress = 0.033331662
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(27, -1.999999)
+position = Vector2(-23.999996, -3)
 rotation = 0.60922223
 shape = SubResource("CapsuleShape2D_onrkg")
+script = ExtResource("3_pxktv")
