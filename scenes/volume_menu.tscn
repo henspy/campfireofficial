@@ -1,14 +1,14 @@
 [gd_scene load_steps=7 format=3 uid="uid://c58x2eif0ynni"]
 
 [ext_resource type="Script" uid="uid://coukm4knmek2s" path="res://scripts/volume_menu.gd" id="1_1ken0"]
+[ext_resource type="Texture2D" uid="uid://d3quaedeyvmly" path="res://assets/sprites/Screenshot 2026-03-01 114203.png" id="2_5mxti"]
 [ext_resource type="Script" uid="uid://cmtq5qvbum38y" path="res://scripts/audio_options.gd" id="2_gbio0"]
 [ext_resource type="FontFile" uid="uid://dqewohnnppmla" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_5mxti"]
-[ext_resource type="Texture2D" uid="uid://c3n36ajf6ykbv" path="res://assets/sprites/Home_page_thingy.png" id="4_gbio0"]
 [ext_resource type="FontFile" uid="uid://btmuas1wj73o1" path="res://assets/fonts/GrapeSoda.ttf" id="5_5mxti"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5mxti"]
-texture = ExtResource("4_gbio0")
-modulate_color = Color(0.31431612, 0.31431612, 0.3143161, 1)
+texture = ExtResource("2_5mxti")
+modulate_color = Color(0.7288223, 0.7288219, 0.728822, 1)
 
 [node name="volume_menu" type="Control"]
 layout_mode = 3

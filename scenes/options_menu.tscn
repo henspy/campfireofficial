@@ -1,13 +1,13 @@
 [gd_scene load_steps=10 format=3 uid="uid://bxl76bcl8rogb"]
 
 [ext_resource type="Script" uid="uid://dtx78u0fq41bx" path="res://scripts/options_menu.gd" id="1_ijpji"]
+[ext_resource type="Texture2D" uid="uid://d3quaedeyvmly" path="res://assets/sprites/Screenshot 2026-03-01 114203.png" id="2_3xsyx"]
 [ext_resource type="FontFile" uid="uid://dqewohnnppmla" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_lfjc7"]
 [ext_resource type="FontFile" uid="uid://btmuas1wj73o1" path="res://assets/fonts/GrapeSoda.ttf" id="3_3xsyx"]
-[ext_resource type="Texture2D" uid="uid://c3n36ajf6ykbv" path="res://assets/sprites/Home_page_thingy.png" id="4_lfjc7"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3xsyx"]
-texture = ExtResource("4_lfjc7")
-modulate_color = Color(0.3137255, 0.3137255, 0.3137255, 1)
+texture = ExtResource("2_3xsyx")
+modulate_color = Color(0.67894405, 0.6789436, 0.6789437, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7uy4"]
 bg_color = Color(1, 1, 1, 1)
