@@ -1,8 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://4vtt8sx74ifj"]
+[gd_scene load_steps=13 format=3 uid="uid://4vtt8sx74ifj"]
 
 [ext_resource type="Script" uid="uid://xttxh3aivy5u" path="res://scripts/main_menu.gd" id="1_3d1i7"]
 [ext_resource type="FontFile" uid="uid://btmuas1wj73o1" path="res://assets/fonts/GrapeSoda.ttf" id="1_qkhwq"]
 [ext_resource type="FontFile" uid="uid://dqewohnnppmla" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_48ign"]
+[ext_resource type="Texture2D" uid="uid://4vamaoqduvas" path="res://assets/background1.png" id="2_ldpc3"]
+[ext_resource type="Texture2D" uid="uid://daf2vna40mies" path="res://assets/background3.png" id="3_y35fp"]
+[ext_resource type="Texture2D" uid="uid://dpcgq4hqco3sx" path="res://assets/background4b.png" id="4_dj72i"]
 [ext_resource type="Texture2D" uid="uid://c3n36ajf6ykbv" path="res://assets/sprites/Home_page_thingy.png" id="4_l7wge"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7uy4"]
@@ -48,6 +51,21 @@ script = ExtResource("1_3d1i7")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
+
+[node name="Background1" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(581, 319.5)
+scale = Vector2(1.2083334, 1.3520833)
+texture = ExtResource("2_ldpc3")
+
+[node name="Background3" type="Sprite2D" parent="CanvasLayer/Background1"]
+position = Vector2(0.8275757, 4.067795)
+scale = Vector2(0.987931, 1.0077041)
+texture = ExtResource("3_y35fp")
+
+[node name="Background4b" type="Sprite2D" parent="CanvasLayer/Background1/Background3"]
+position = Vector2(0.8377075, 3.302765)
+scale = Vector2(1.0017452, 0.98623854)
+texture = ExtResource("4_dj72i")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
