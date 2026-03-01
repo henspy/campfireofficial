@@ -1,12 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://ctruha3nldwtr"]
+[gd_scene load_steps=4 format=3 uid="uid://ctruha3nldwtr"]
 
 [ext_resource type="Texture2D" uid="uid://dilyeayo6t530" path="res://assets/sprites/cave/demo_spritesheet.png" id="1_5rg0c"]
+[ext_resource type="Script" uid="uid://do4gyc1qjyigm" path="res://red_gem.gd" id="1_l0vri"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5qd4p"]
 radius = 1.6922455
 height = 4.850136
 
 [node name="Red gem" type="Area2D"]
+script = ExtResource("1_l0vri")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(147.85938, 74.77344)
@@ -21,3 +23,5 @@ rotation = -0.8269134
 scale = Vector2(4.833867, 5.166674)
 skew = 0.29696465
 shape = SubResource("CapsuleShape2D_5qd4p")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
