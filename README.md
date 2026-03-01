@@ -19,6 +19,7 @@
 		<br />
 		Officially approved to use in events created by Hack Club
 		<br />
+		This game was made during the weekend for campfire, you are a knight that goes into a dungeon and needs to escape and get treasure
 		<br />
 		<a href="https://godotengine.org/asset-library/asset/3484">Get from Asset Lib</a>
 		·
